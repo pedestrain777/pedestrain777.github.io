@@ -7,12 +7,12 @@
 # server process.
 
 # Basic Site Settings
-locale                   : "zh-CN"
+locale                   : "en-US"
 site_theme               : "default" # options: "default", "air", "sunrise", "mint", "dirt", "contrast"
-title                    : "张恒一 | 个人主页"
+title                    : "Hengyi Zhang | Personal Homepage"
 title_separator          : "-"
-name                     : &name "张恒一"
-description              : &description "张恒一个人主页｜北京邮电大学本科生｜高效生成模型与云边协同方向"
+name                     : &name "Hengyi Zhang"
+description              : &description "Personal homepage of Hengyi Zhang | BUPT undergraduate | Efficient generative models and cloud-edge collaboration"
 url                      : "https://pedestrain777.github.io"
 baseurl                  : ""
 repository               : "pedestrain777/pedestrain777.github.io"
@@ -20,10 +20,10 @@ repository               : "pedestrain777/pedestrain777.github.io"
 # Site Author - Left sidebar
 author:
   # Biographic information
-  avatar           : "profile.png"   # 你后续把头像放到 /images/profile.png 即可
+  avatar           : "profile.jpg"   # 头像放到 /images/profile.jpg（请手动将 个人.jpg 复制到 images/profile.jpg）
   name             : "张恒一"
   pronouns         :
-  bio              : "北京邮电大学本科生，关注高效生成模型、视频生成加速与云边协同系统。"
+  bio              : "北京邮电大学本科生，研究兴趣包括高效生成模型、视频生成加速与云边协同系统。"
   location         : "Beijing, China"
   employer         : "Beijing University of Posts and Telecommunications"
   uri              :

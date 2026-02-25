@@ -1,31 +1,155 @@
 ---
 permalink: /
-title: "张恒一"
+title: "Home"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-## 个人简介
+<div style="margin-bottom: 1rem;">
+  <button id="lang-en-btn" onclick="switchLang('en')" style="padding: 0.45rem 0.8rem; margin-right: 0.5rem; border: 1px solid #ccc; border-radius: 6px; background: #f5f5f5; cursor: pointer;">English</button>
+  <button id="lang-zh-btn" onclick="switchLang('zh')" style="padding: 0.45rem 0.8rem; border: 1px solid #ccc; border-radius: 6px; background: #fff; cursor: pointer;">中文</button>
+</div>
 
-你好，我是**张恒一**，北京邮电大学智能科学与技术专业本科生（2023级）。
+<script>
+  function switchLang(lang) {
+    var en = document.getElementById('content-en');
+    var zh = document.getElementById('content-zh');
+    var enBtn = document.getElementById('lang-en-btn');
+    var zhBtn = document.getElementById('lang-zh-btn');
 
-我目前主要关注**高效生成模型系统**方向，尤其是围绕视频生成模型（如 Diffusion / DiT）在**云边协同场景**下的加速与部署问题。同时，我也对边缘设备上的模型适配与推理系统（如 PEFT、异构设备协同）有持续兴趣。
+    if (lang === 'zh') {
+      en.style.display = 'none';
+      zh.style.display = 'block';
+      enBtn.style.background = '#fff';
+      zhBtn.style.background = '#f5f5f5';
+      localStorage.setItem('site_lang_pref', 'zh');
+    } else {
+      en.style.display = 'block';
+      zh.style.display = 'none';
+      enBtn.style.background = '#f5f5f5';
+      zhBtn.style.background = '#fff';
+      localStorage.setItem('site_lang_pref', 'en');
+    }
+  }
 
-目前正在持续推进与完善个人科研主页，后续会逐步补充项目细节、论文信息、实验记录与技术笔记。
+  document.addEventListener('DOMContentLoaded', function () {
+    var saved = localStorage.getItem('site_lang_pref') || 'en'; // default English
+    switchLang(saved);
+  });
+</script>
+
+<div id="content-en">
+
+## Biography
+
+**Hengyi Zhang** is an undergraduate student in **Intelligent Science and Technology** at **Beijing University of Posts and Telecommunications (BUPT)** (Class of 2023).
+
+Current interests focus on **efficient generative AI systems**, especially acceleration and deployment of **Diffusion / DiT-based video generation** under **cloud-edge collaborative settings**. Additional interests include model adaptation and system optimization on heterogeneous edge devices (e.g., PEFT-related deployment and evaluation).
+
+This homepage is under active construction and will be gradually expanded with project details, publications/submissions, and technical notes.
 
 ---
 
-## 研究兴趣（持续更新）
+## Research Interests
+
+- Efficient Generative Models
+- Video Generation Acceleration (Diffusion / DiT)
+- Cloud-Edge Collaborative Inference and Scheduling
+- Edge-side Deployment and System Optimization
+- Parameter-Efficient Fine-Tuning (PEFT) in Practice
+
+---
+
+## Education
+
+- **Beijing University of Posts and Telecommunications (BUPT)**
+  - B.Eng. in Intelligent Science and Technology (Undergraduate)
+  - **2023.09 – Present**
+  - GPA: **3.82 / 4.00** (Average score: 91.7/100)
+  - Rank: **7 / 100**
+  - CET-6: **510**
+
+---
+
+## Research Experience Overview
+
+### 1) School of Computer Science, Peking University (Research Internship)
+
+Participated in research and engineering implementation on **cloud-edge collaborative acceleration for DiT-based video generation**, centered on the **EcoVideo** paradigm (currently **under review**).
+
+**EcoVideo (under review):**
+- Targets the severe latency bottleneck of the standard *step-by-step full-frame denoising* paradigm in Diffusion Transformers (DiTs) for video generation.
+- Proposes an **entropy-orchestrated video generation paradigm** for dynamic cloud-edge environments.
+- Uses **attention entropy** to identify informative **key frames**, reducing redundant cloud computation on low-information frames.
+- Introduces a **heap-sort-based greedy interpolation algorithm** to adaptively refine complex motion regions and preserve temporal fidelity under varying frame budgets.
+- Designs a **coordinated cloud-edge optimization mechanism** to map generation workloads to real-time bandwidth and edge compute availability, enabling overlap between computation and communication.
+- Aims to mitigate motion breakage and detail loss while improving end-to-end throughput in dynamic distributed settings.
+
+**Problem motivation (high-level):**
+- Existing static step-splitting cloud-edge strategies often ignore inter-frame redundancy.
+- Quality stability is sensitive when switching denoising responsibilities across steps/models.
+- System-level latency depends strongly on dynamic bandwidth and heterogeneous compute, which is often under-evaluated in prior work.
+
+> More public details (if available) will be added after the review stage or according to project disclosure policy.
+
+### 2) School of Artificial Intelligence, BUPT (Research)
+
+Participated in research on **few-step generation for discrete diffusion models**, including experiment design and validation, with a focus on balancing generation quality and efficiency.
+
+### 3) School of Computer Science, BUPT (Research)
+
+Participated in system-oriented research on **collaborative PEFT for large models on edge devices**, with responsibilities including deployment and testing across different edge devices and model configurations.
+
+---
+
+## Honors and Awards
+
+- **Enterprise Scholarship** (award rate: **0.17%**)
+- **University-Level Scholarship**
+- **Outstanding Student Cadre in Mental Health Education Work (Annual)**
+- **"Merit Student" Title (Two Consecutive Years)**
+- **Robot Task Challenge Competition** (Team Leader): Provincial First Prize, National Second Prize  
+  *(Responsible for SLAM / navigation-related module)*
+- **National College Mathematics Competition**: National Second Prize
+
+---
+
+## Campus Experience and Personal Qualities
+
+- Experience in student service roles (e.g., class-level psychological committee / organization-related work)
+- Strong teamwork and execution ability in collaborative projects
+- Long-term engagement in sports activities (e.g., football), with emphasis on discipline and consistency
+
+---
+
+## Contact
+
+- **Email**: `hengyi@bupt.edu.cn`
+- **GitHub**: <https://github.com/pedestrain777>
+
+</div>
+
+<div id="content-zh" style="display:none;">
+
+## 个人简介
+
+**张恒一**，北京邮电大学（BUPT）智能科学与技术专业本科生（2023级）。
+
+当前主要关注**高效生成式人工智能系统**方向，尤其是 **Diffusion / DiT 视频生成模型**在**云边协同场景**下的加速与部署问题；同时也持续关注异构边缘设备上的模型适配与系统优化（如 PEFT 相关部署与测试）。
+
+个人主页正在持续完善中，后续将逐步补充项目细节、论文/投稿信息以及技术笔记等内容。
+
+---
+
+## 研究兴趣
 
 - 高效生成模型（Efficient Generative Models）
 - 视频生成加速（Diffusion / DiT）
 - 云边协同推理与调度（Cloud-Edge Collaboration）
-- 边缘设备上的模型部署与系统优化
-- 大模型高效适配（PEFT）与工程实践
-
-> 注：后续你告诉我更精确的关键词后，我可以再帮你改成更“论文风”的版本。
+- 边缘侧部署与系统优化
+- 大模型参数高效适配（PEFT）工程实践
 
 ---
 
@@ -33,64 +157,61 @@ redirect_from:
 
 - **北京邮电大学（BUPT）**
   - 智能科学与技术（本科）
-  - 2023.09 – 至今
-  - GPA：3.82 / 4.00（均分 91.7）
-  - 专业排名：7 / 100
-  - CET-6：510
+  - **2023.09 – 至今**
+  - GPA：**3.82 / 4.00**（均分 91.7 / 100）
+  - 专业排名：**7 / 100**
+  - CET-6：**510**
 
 ---
 
 ## 科研经历概览
 
-### 1）北大计算机学院（科研实习）
-围绕 **DiT 视频生成模型的云边协同加速**开展研究与工程实现，参与 **EcoVideo** 相关工作。主要涉及关键帧生成、插帧策略、以及动态云边协同方案设计与实现。
+### 1）北京大学计算机学院（科研实习）
 
-- 当前相关工作仍在审核阶段（under review）
-- 后续将在本主页中补充可公开的项目细节与实验结果
+参与 **DiT 视频生成模型云边协同加速**方向的研究与工程实现，围绕 **EcoVideo** 范式开展工作（目前仍处于**审核阶段 / under review**）。
+
+**EcoVideo（审核中）主要内容概述：**
+- 面向 Diffusion Transformers（DiTs）视频生成中“逐步、全帧去噪”带来的高时延瓶颈问题，探索动态云边协同加速方案。
+- 提出面向动态云边环境的 **熵驱动（entropy-orchestrated）视频生成范式**。
+- 利用 **注意力熵（Attention Entropy）** 识别信息量更高的**关键帧（key frames）**，减少云端在低信息冗余帧上的重复计算。
+- 设计 **基于堆排序思想的贪心插帧算法**，对复杂运动区域进行自适应细化，以在不同预算下维持时序平滑性与细节质量。
+- 结合实时带宽与边缘计算资源状态，进行云边协同负载映射与优化，实现计算与通信重叠，提升端到端吞吐效率。
+- 目标是在动态云边场景中缓解运动断裂与细节损失问题，同时获得显著加速效果。
+
+**问题动机（概括）：**
+- 现有静态按步切分（step-splitting）的协同策略往往忽略视频帧间冗余；
+- 在不同模型/步骤切换时，质量稳定性容易下降；
+- 真实系统中的时延强烈依赖带宽波动与异构算力，系统级验证往往不足。
+
+> 后续将在可公开范围内补充更详细的算法设计、实验设置与结果展示。
 
 ### 2）北京邮电大学人工智能学院（科研）
-参与**离散扩散模型少步生成**方向的研究与实验设计，负责实验方案实现与验证工作，聚焦生成效率与质量之间的平衡。
+
+参与**离散扩散模型少步生成**方向研究，负责实验方案实现与验证工作，关注生成效率与视觉质量之间的平衡。
 
 ### 3）北京邮电大学计算机学院（科研）
-参与边缘设备协同场景下的大模型高效适配相关系统研究（PEFT 方向），承担不同边缘设备与模型组合下的部署测试与实验支持工作。
+
+参与边缘设备协同场景下的大模型参数高效适配（PEFT）相关系统研究，承担不同边缘设备与模型组合下的部署测试与实验支持工作。
 
 ---
 
-## 代表项目（精选）
+## 荣誉与竞赛
 
-### EcoVideo（重点展示，持续更新中）
-**定位：** 面向动态云边环境的视频生成加速方案（研究型项目）
-
-**你可在这里展示的内容（后续可继续补）：**
-- 关键帧生成与筛选（减少冗余计算）
-- 插帧与过渡策略（提升时序连续性）
-- 云端 / 边缘端任务分配与调度
-- 在不同模型上的适配与实验（如你后续愿意公开的部分）
-
-**说明：**
-- 该项目目前以科研工作为主，部分细节暂不公开
-- 后续我可以帮你把这里升级为“项目页卡片 + 单独详情页”形式
-
-### 其他项目（简要）
-- **“清晨之声”平台**：基于 Django + MySQL 的平台开发与部署实践
-- **“南太”AI 中文学习平台**：参与 Agent 与资源采集相关功能设计与实现
-- （后续可根据你的需求补充更多工程截图与技术栈说明）
-
----
-
-## 荣誉与竞赛（简要）
-
-- 机器人任务挑战赛（队长）——省级一等奖、国家级二等奖  
+- **企业奖学金**（获奖率 **0.17%**）
+- **校级奖学金**
+- **年度心理素质教育工作优秀学生骨干**
+- **连续两届“三好学生”称号**
+- **机器人任务挑战赛**（队长）：省级一等奖、国家级二等奖  
   （负责 SLAM / 导航相关模块）
-- 全国大学生数学竞赛——国家级二等奖
+- **全国大学生数学竞赛**：国家级二等奖
 
 ---
 
-## 校园经历与个人特点（简要）
+## 校园经历与个人特点
 
-- 曾担任班级/团队相关学生工作（如心理委员、组织委员）
-- 具备较强的团队协作与执行能力
-- 热爱运动（如足球），注重长期稳定投入与持续训练
+- 具有学生服务工作经历（如心理委员、组织委员等）
+- 具备较强团队协作能力与执行能力
+- 长期参与体育活动（如足球），重视纪律性与持续投入
 
 ---
 
@@ -99,13 +220,4 @@ redirect_from:
 - **邮箱**：`hengyi@bupt.edu.cn`
 - **GitHub**：<https://github.com/pedestrain777>
 
----
-
-## 说明
-
-这是我的个人主页第一版，当前以**主页面信息展示**为主。后续会继续补充：
-
-- EcoVideo 的更详细介绍（在可公开范围内）
-- 项目页面与简历页面
-- 论文/投稿信息（审核状态更新）
-- 技术笔记 / 博客（视后续规划决定是否开启）
+</div>
