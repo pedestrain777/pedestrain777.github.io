@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # options: "default", "air", "sunrise", "mint", "dirt", "contrast"
-title                    : "Hengyi Zhang | Personal Homepage"
+title                    : "Hengyi Zhang"
 title_separator          : "-"
 name                     : &name "Hengyi Zhang"
-description              : &description "Personal homepage of Hengyi Zhang | BUPT undergraduate | Efficient generative models and cloud-edge collaboration"
+description              : &description "Hengyi Zhang | BUPT undergraduate | Efficient generative models and cloud-edge collaboration"
 url                      : "https://pedestrain777.github.io"
 baseurl                  : ""
 repository               : "pedestrain777/pedestrain777.github.io"

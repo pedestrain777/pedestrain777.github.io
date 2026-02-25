@@ -33,13 +33,13 @@ redirect_from:
     }
 
     .lang-root .lang-switch .sep {
-      color: #999;
+      color: #888;
       margin: 0 -0.15rem;
     }
 
     .lang-root .lang-switch label {
       cursor: pointer;
-      color: #8a8a8a;
+      color: #777; /* inactive */
       text-decoration: none;
       user-select: none;
       font-weight: 500;
@@ -49,14 +49,14 @@ redirect_from:
     }
 
     .lang-root .lang-switch label:hover {
-      color: #b30000;
+      color: #222; /* hover black/gray */
     }
 
-    /* active tab */
+    /* active tab: black instead of red */
     .lang-root #lang-en:checked ~ .lang-switch .label-en,
     .lang-root #lang-zh:checked ~ .lang-switch .label-zh {
-      color: #b30000;
-      border-bottom-color: #b30000;
+      color: #111;
+      border-bottom-color: #111;
       font-weight: 600;
     }
 
@@ -111,7 +111,6 @@ redirect_from:
       margin: 0.45rem 0 0.7rem 0;
     }
 
-    /* make the top language switch less crowded on mobile */
     @media (max-width: 768px) {
       .lang-root .lang-switch {
         justify-content: flex-start;
@@ -146,8 +145,7 @@ redirect_from:
         <p>
           Current interests focus on <strong>efficient generative AI systems</strong>, especially acceleration and deployment of
           <strong>Diffusion / DiT-based video generation</strong> under <strong>cloud-edge collaborative settings</strong>.
-          Additional interests include model adaptation and system optimization on heterogeneous edge devices
-          (e.g., PEFT-related deployment and evaluation).
+          Additional interests include model adaptation and system optimization on heterogeneous edge devices.
         </p>
         <p>
           This homepage is under active construction and will be gradually expanded with project details,
@@ -162,7 +160,6 @@ redirect_from:
           <li>Video Generation Acceleration (Diffusion / DiT)</li>
           <li>Cloud-Edge Collaborative Inference and Scheduling</li>
           <li>Edge-side Deployment and System Optimization</li>
-          <li>Parameter-Efficient Fine-Tuning (PEFT) in Practice</li>
         </ul>
       </section>
 
@@ -185,10 +182,10 @@ redirect_from:
         <p>
           Participated in research and engineering implementation on
           <strong>cloud-edge collaborative acceleration for DiT-based video generation</strong>,
-          centered on the <strong>EcoVideo</strong> paradigm (currently <strong>under review</strong>).
+          centered on the <strong>EcoVideo</strong> paradigm, <strong>submitted to ECCV 2026</strong>.
         </p>
 
-        <p><strong>EcoVideo (under review):</strong></p>
+        <p><strong>EcoVideo (submitted to ECCV 2026):</strong></p>
         <ul>
           <li>Targets the severe latency bottleneck of the standard <em>step-by-step full-frame denoising</em> paradigm in Diffusion Transformers (DiTs) for video generation.</li>
           <li>Proposes an <strong>entropy-orchestrated video generation paradigm</strong> for dynamic cloud-edge environments.</li>
@@ -206,7 +203,7 @@ redirect_from:
         </ul>
 
         <div class="note-block">
-          More public details (if available) will be added after the review stage or according to project disclosure policy.
+          More public details (if available) will be added according to project disclosure policy.
         </div>
 
         <h3>2) School of Artificial Intelligence, BUPT (Research)</h3>
@@ -217,7 +214,7 @@ redirect_from:
 
         <h3>3) School of Computer Science, BUPT (Research)</h3>
         <p>
-          Participated in system-oriented research on <strong>collaborative PEFT for large models on edge devices</strong>,
+          Participated in system-oriented research on collaborative deployment and evaluation for large-model adaptation on edge devices,
           with responsibilities including deployment and testing across different edge devices and model configurations.
         </p>
       </section>
@@ -228,7 +225,7 @@ redirect_from:
           <li><strong>Enterprise Scholarship</strong> (award rate: <strong>0.17%</strong>)</li>
           <li><strong>University-Level Scholarship</strong></li>
           <li><strong>Outstanding Student Cadre in Mental Health Education Work (Annual)</strong></li>
-          <li><strong>“Merit Student” Title (Two Consecutive Years)</strong></li>
+          <li><strong>Outstanding Student of Beijing University of Posts and Telecommunications</strong> (Two Consecutive Years)</li>
           <li><strong>Robot Task Challenge Competition</strong> (Team Leader): Provincial First Prize, National Second Prize (Responsible for SLAM / navigation-related module)</li>
           <li><strong>National College Mathematics Competition</strong>: National Second Prize</li>
         </ul>
@@ -264,7 +261,7 @@ redirect_from:
         <p>
           当前主要关注<strong>高效生成式人工智能系统</strong>方向，尤其是
           <strong>Diffusion / DiT 视频生成模型</strong>在<strong>云边协同场景</strong>下的加速与部署问题；
-          同时也持续关注异构边缘设备上的模型适配与系统优化（如 PEFT 相关部署与测试）。
+          同时也持续关注异构边缘设备上的模型适配与系统优化。
         </p>
         <p>
           个人主页正在持续完善中，后续将逐步补充项目细节、论文/投稿信息以及技术笔记等内容。
@@ -278,7 +275,6 @@ redirect_from:
           <li>视频生成加速（Diffusion / DiT）</li>
           <li>云边协同推理与调度（Cloud-Edge Collaboration）</li>
           <li>边缘侧部署与系统优化</li>
-          <li>大模型参数高效适配（PEFT）工程实践</li>
         </ul>
       </section>
 
@@ -299,10 +295,10 @@ redirect_from:
 
         <h3>1）北京大学计算机学院（科研实习）</h3>
         <p>
-          参与<strong> DiT 视频生成模型云边协同加速 </strong>方向的研究与工程实现，围绕 <strong>EcoVideo</strong> 范式开展工作（目前仍处于<strong>审核阶段 / under review</strong>）。
+          参与<strong>DiT 视频生成模型云边协同加速</strong>方向的研究与工程实现，围绕 <strong>EcoVideo</strong> 范式开展工作，<strong>投稿于 ECCV 2026</strong>。
         </p>
 
-        <p><strong>EcoVideo（审核中）主要内容概述：</strong></p>
+        <p><strong>EcoVideo（已投稿 ECCV 2026）主要内容概述：</strong></p>
         <ul>
           <li>面向 Diffusion Transformers（DiTs）视频生成中“逐步、全帧去噪”带来的高时延瓶颈问题，探索动态云边协同加速方案。</li>
           <li>提出面向动态云边环境的<strong>熵驱动（entropy-orchestrated）视频生成范式</strong>。</li>
@@ -330,7 +326,7 @@ redirect_from:
 
         <h3>3）北京邮电大学计算机学院（科研）</h3>
         <p>
-          参与边缘设备协同场景下的大模型参数高效适配（PEFT）相关系统研究，承担不同边缘设备与模型组合下的部署测试与实验支持工作。
+          参与边缘设备协同场景下的大模型适配相关系统研究，承担不同边缘设备与模型组合下的部署测试与实验支持工作。
         </p>
       </section>
 
@@ -340,7 +336,7 @@ redirect_from:
           <li><strong>企业奖学金</strong>（获奖率：<strong>0.17%</strong>）</li>
           <li><strong>校级奖学金</strong></li>
           <li><strong>年度心理素质教育工作优秀学生骨干</strong></li>
-          <li><strong>连续两届“三好学生”称号</strong></li>
+          <li><strong>连续两届北京邮电大学优秀学生</strong></li>
           <li><strong>机器人任务挑战赛</strong>（队长）：省级一等奖、国家级二等奖（负责 SLAM / 导航相关模块）</li>
           <li><strong>全国大学生数学竞赛</strong>：国家级二等奖</li>
         </ul>
